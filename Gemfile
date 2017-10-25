@@ -27,6 +27,7 @@ gem 'therubyracer', platforms: :ruby
 #Bootsrtapの大元
 gem 'bootstrap-sass', '~> 3.2.0'
 #ソーシャルボタンを簡単に実装するためのGem
+
 gem 'bootstrap-social-rails'
 
 gem 'font-awesome-rails'
@@ -92,6 +93,8 @@ group :development, :test do
   gem "spring-commands-rspec"
 
   gem "xray-rails"
+  
+  gem 'less-rails', git: 'https://github.com/MustafaZain/less-rails'
 
 end
 

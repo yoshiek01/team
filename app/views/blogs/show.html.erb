@@ -1,14 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+  <!-- 中央寄せにするため、wrapperでブログ画面をかこむ -->
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+    <p><%= notice %></p>
+    <h1>ブログ詳細</h1>
+      
+       <div class="row">
+        <h3>
+          <strong>Title:</strong>
+          <%= @blog.title %>
+        </h3>
+        <h4>
+          <strong>Content</strong>
+            <%= @blog.content %>
+        </h4>
+        <!-- strongは太字 -->
+ 
 
-<p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
-</p>
+        <%= link_to "Edit", edit_blog_path, class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to "Back", blogs_path, class: 'btn btn-default btn-sm btn-success' %>
+       </div>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+  </div>
+  </div>

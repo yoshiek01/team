@@ -1,8 +1,15 @@
 <header>
-  <p>ヘッダーとフッターをパーシャル化する</p>
-  <% if user_signed_in? %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-  <% else %>
-   <%= link_to "ログイン", new_user_session_path %>
-  <% end %>
+    <ul>
+      <li><a href="/">Gloup Work</a></li>
+      <li><a href="/">トップページ</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+      <li><a href="/blogs">ブログ</a></li>
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "ログイン", new_user_session_path %>
+      <% end %>
+      <br />
+    </ul>
+
 </header>
